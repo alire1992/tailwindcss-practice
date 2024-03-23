@@ -3,7 +3,11 @@ module.exports = {
   content: ["./*.html"],
   darkMode: "selector",
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        vazir: ["vazir"],
+      },
+    },
   },
   plugins: [],
 };
