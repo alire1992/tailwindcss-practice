@@ -12,17 +12,71 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="dist/output.css" />
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
-    ></script>
     <title>css tailwind project</title>
   </head>
   <body class="font-vazir text-gray-800">
     <header class="shadow-md">
       <div class="container mx-auto py-2 px-4">
-        <nav class="flex justify-between items-center">
-          <div class="flex items-center gap-3">
+        <nav class="flex justify-between items-center relative">
+          <!-- Mobile Menu -->
+          <menu class="md:hidden">
+            <i
+              class="fas fa-bars text-xl cursor-pointer"
+              onclick="toggleModal()"
+            ></i>
+            <div
+              class="hidden absolute bg-white bg-opacity-75 border rounded-lg py-4 px-6 w-full"
+              id="modalMenu"
+            >
+              <div>
+                <i
+                  class="fas fa-times text-xl cursor-pointer"
+                  onclick="toggleModal()"
+                ></i>
+              </div>
+              <ul class="flex flex-col gap-3 mb-2 text-center">
+                <li>
+                  <a href="#">صحفه اصلی</a>
+                </li>
+                <div>
+                  <li>
+                    <a
+                      href="#"
+                      id="product-mobile"
+                      onclick="toggleSubMenu(event)"
+                    >
+                      محصولات
+                      <i class="fas fa-chevron-left text-[0.7rem]"></i>
+                    </a>
+                  </li>
+                  <div
+                    class="hidden bg-white border rounded-lg px-6 py-4 transition-all"
+                    id="subMenuBox-mobile"
+                  >
+                    <ul class="space-y-2">
+                      <li class="border-b-2 border-gray-100 pb-1">
+                        <a href="#">محصولات شماره یک</a>
+                      </li>
+                      <li class="border-b-2 border-gray-100 pb-1">
+                        <a href="#">محصولات شماره دو</a>
+                      </li>
+                      <li class="border-b-2 border-gray-100 pb-1">
+                        <a href="#">محصولات شماره سه</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <li><a href="#" class="nav-item">درباره ما</a></li>
+                <li><a href="#" class="nav-item">تماس باما</a></li>
+              </ul>
+              <div class="flex flex-col gap-2 mr-3">
+                <button class="btn btn-primary">عضویت</button>
+                <button class="btn btn-secoundary">ورود</button>
+              </div>
+            </div>
+          </menu>
+          <!-- Descktop  Menu -->
+          <menu class="items-center gap-3 hidden md:flex">
             <div class="mr-3">
               <button class="btn btn-primary">عضویت</button>
               <button class="btn btn-secoundary">ورود</button>
@@ -31,23 +85,21 @@
               <li>
                 <a href="#" class="nav-item nav-item-selected">صحفه اصلی</a>
               </li>
-              <div x-data="{ open: false }">
+              <div>
                 <li>
                   <a
                     href="#"
                     class="nav-item"
-                    @click="open = ! open"
-                    :class="{'nav-item-selected':open}"
+                    id="product"
+                    onclick="toggleSubMenu(event)"
                   >
                     محصولات
-                    <i class="fas fa-chevron-down text-[0.7rem]"></i>
+                    <i class="fas fa-chevron-left text-[0.7rem]"></i>
                   </a>
                 </li>
                 <div
-                  x-show="open"
-                  @click.outside="open = false"
-                  x-cloak
-                  class="absolute top-[3rem] right-[22rem] bg-white border rounded-lg px-6 py-4"
+                  class="absolute top-[3rem] hidden bg-white border rounded-lg px-6 py-4"
+                  id="subMenuBox"
                 >
                   <ul class="space-y-2">
                     <li>
@@ -71,12 +123,14 @@
               <li><a href="#" class="nav-item">درباره ما</a></li>
               <li><a href="#" class="nav-item">تماس باما</a></li>
             </ul>
-          </div>
+          </menu>
+
           <div>
             <h1 class="font-sans text-3xl"><a href="#">Alireza</a></h1>
           </div>
         </nav>
       </div>
     </header>
+    <script src="js/index.js"></script>
   </body>
 </html>
