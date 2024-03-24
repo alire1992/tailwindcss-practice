@@ -33,4 +33,16 @@
   .btn-secoundary {
     @apply bg-slate-300 text-black hover:text-white hover:bg-teal-600 transition-all duration-300 ease-in;
   }
+
+  .nav-item {
+    @apply transition duration-300 ease-in-out hover:border-b-2 hover:border-teal-600;
+  }
+
+  .nav-item-selected {
+    @apply border-b-2 border-teal-600;
+  }
+
+  [x-cloak] {
+    display: none !important;
+  }
 }
