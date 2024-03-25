@@ -15,26 +15,26 @@
     <title>css tailwind project</title>
   </head>
   <body class="font-vazir text-gray-800 dark:bg-slate-900">
-    <header class="shadow-md">
+    <header class="shadow-lg">
       <div class="container mx-auto py-2 px-4">
         <nav class="flex justify-between items-center relative">
           <!-- Mobile Menu -->
           <menu class="md:hidden">
             <i
-              class="fas fa-bars text-xl cursor-pointer"
+              class="fas fa-bars text-xl cursor-pointer dark:text-white"
               onclick="toggleModal()"
             ></i>
             <div
-              class="hidden absolute bg-white bg-opacity-75 border rounded-lg py-4 px-6 w-full"
+              class="hidden absolute bg-white bg-opacity-75 border rounded-lg py-4 px-6 w-full dark:bg-slate-900"
               id="modalMenu"
             >
               <div>
                 <i
-                  class="fas fa-times text-xl cursor-pointer"
+                  class="fas fa-times text-xl cursor-pointer dark:text-white"
                   onclick="toggleModal()"
                 ></i>
               </div>
-              <ul class="flex flex-col gap-3 mb-2 text-center">
+              <ul class="flex flex-col gap-3 mb-2 text-center dark:text-white">
                 <li>
                   <a href="#">صحفه اصلی</a>
                 </li>
@@ -50,7 +50,7 @@
                     </a>
                   </li>
                   <div
-                    class="hidden bg-white border rounded-lg px-6 py-4 transition-all"
+                    class="hidden bg-white border rounded-lg px-6 py-4 transition-all dark:bg-slate-700"
                     id="subMenuBox-mobile"
                   >
                     <ul class="space-y-2">
@@ -81,7 +81,7 @@
               <button class="btn btn-primary">عضویت</button>
               <button class="btn btn-secoundary">ورود</button>
             </div>
-            <ul class="flex gap-5">
+            <ul class="flex gap-5 dark:text-white">
               <li>
                 <a href="#" class="nav-item nav-item-selected">صحفه اصلی</a>
               </li>
@@ -98,7 +98,7 @@
                   </a>
                 </li>
                 <div
-                  class="absolute top-[3rem] hidden bg-white border rounded-lg px-6 py-4"
+                  class="absolute top-[3rem] hidden bg-white border rounded-lg px-6 py-4 dark:bg-slate-700"
                   id="subMenuBox"
                 >
                   <ul class="space-y-2">
@@ -132,13 +132,38 @@
             >
               <i class="fas fa-moon"></i>
             </button>
-            <h1 class="font-sans text-3xl font-bold">
+            <h1 class="font-sans text-3xl font-bold dark:text-white">
               <a href="#">Alireza</a>
             </h1>
           </div>
         </nav>
       </div>
     </header>
+    <section>
+      <div
+        class="container mx-auto py-2 px-4 md:flex md:items-center md:gap-10"
+      >
+        <div>
+          <h2 class="text-2xl mb-5 dark:text-white">
+            لورم ایپسوم <span class="text-teal-600">متن ساختگی</span>
+          </h2>
+          <p class="mb-5 dark:text-white">
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+            استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
+            ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز،
+            و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+          </p>
+          <button class="btn btn-primary">لورم ایپسوم متن</button>
+          <button class="btn btn-secoundary">لورم ایپسوم</button>
+        </div>
+
+        <img
+          src="image/online-shopping-34.png"
+          alt="main image"
+          class="w-full sm:w-[400px] object-cover"
+        />
+      </div>
+    </section>
     <script src="js/index.js"></script>
   </body>
 </html>
