@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="dist/output.css" />
     <title>css tailwind project</title>
   </head>
-  <body class="font-vazir text-gray-800">
+  <body class="font-vazir text-gray-800 dark:bg-slate-900">
     <header class="shadow-md">
       <div class="container mx-auto py-2 px-4">
         <nav class="flex justify-between items-center relative">
@@ -66,8 +66,8 @@
                     </ul>
                   </div>
                 </div>
-                <li><a href="#" class="nav-item">درباره ما</a></li>
-                <li><a href="#" class="nav-item">تماس باما</a></li>
+                <li><a href="#">درباره ما</a></li>
+                <li><a href="#">تماس باما</a></li>
               </ul>
               <div class="flex flex-col gap-2 mr-3">
                 <button class="btn btn-primary">عضویت</button>
@@ -125,8 +125,16 @@
             </ul>
           </menu>
 
-          <div>
-            <h1 class="font-sans text-3xl"><a href="#">Alireza</a></h1>
+          <div class="flex items-center gap-2">
+            ,<button
+              class="btn btn-secoundary leading-[0]"
+              onclick="setDarkMode(event)"
+            >
+              <i class="fas fa-moon"></i>
+            </button>
+            <h1 class="font-sans text-3xl font-bold">
+              <a href="#">Alireza</a>
+            </h1>
           </div>
         </nav>
       </div>

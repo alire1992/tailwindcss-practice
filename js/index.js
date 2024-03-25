@@ -20,3 +20,11 @@ function toggleSubMenu(e) {
     icon.classList.toggle("fa-chevron-down");
   }
 }
+
+function setDarkMode(e) {
+  const root = document.getElementsByTagName("html")[0];
+  root.classList.toggle("dark");
+  const icon = e.target.children[0];
+  icon.classList.toggle("fa-moon");
+  icon.classList.toggle("fa-sun");
+}
