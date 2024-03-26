@@ -41,8 +41,4 @@
   .nav-item-selected {
     @apply border-b-2 border-teal-600;
   }
-
-  [x-cloak] {
-    display: none !important;
-  }
 }
